@@ -138,7 +138,7 @@
 			<section class="ba-section-vdeos">
 				<!-- BEGIN ba-container  -->
 				<div class="ba-container">
-					<a class="ba-play-btn" href="#" aria-label="Play video">
+					<a class="ba-play-btn" href="#fashion-show" aria-label="Play video" data-modal>
 
 					</a>
 					<h2 class="ba-section-vdeos__title">Victoria’s Secret Fashion Show: Kendall
@@ -147,7 +147,7 @@ Jenner And Cigi Makes Their Debut</h2>
 					<div class="ba-video-row">
 
 						<div class="ba-video">
-							<a href="#" class="ba-video__link">
+							<a href="#vs-show" class="ba-video__link" data-modal>
 								<img src="img/video1.jpg" alt="">
 							</a>
 							<h3 class="ba-video__title">
@@ -202,6 +202,28 @@ Jenner And Cigi Makes Their Debut</h2>
 </div>
 <!-- /.ba-wraper -->
 
+<div id="fashion-show" class="ba-modal">
+	<div class="ba-modal__body">
+		<h3>Victoris best moments</h3>
+		<div class="videoWrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/pDM6i7B3lNM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		
+		<a href="#fashion-show" class="ba-modal__close" data-modal>Close</a>
+	</div>
+	<!-- /.ba-modal__body -->
+</div>
+
+<div id="vs-show" class="ba-modal">
+	<div class="ba-modal__body">
+		<h3>Victoris best moments</h3>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, sapiente!</p>
+		<a href="#vs-show" class="ba-modal__close" data-modal>Close</a>
+	</div>
+	<!-- /.ba-modal__body -->
+</div>
+
+<div class="ba-modal-overlay" data-overlay></div>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/slick.min.js"></script>

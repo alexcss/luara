@@ -33,5 +33,17 @@
 		nav.toggleClass('ba-open');
 	});
 
+	$('[data-overlay]').on('click', function (e) {
+		$('.ba-modal-open').removeClass('ba-modal-open');
+	});
+
+	$('[data-modal]').on('click', function (e) {
+		e.preventDefault();
+	
+		var modalId = $(this).attr('href');
+		$(modalId).toggleClass('ba-modal-open');
+		
+	});
+
 })(jQuery);
 

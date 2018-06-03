@@ -2,9 +2,12 @@
 @import "layout";
 @import "fonts";
 @import "slick";
+@import "magnific-popup";
 
 $primary-color: #2b11f0;
 $text-color: #222;
+
+$bg-color: #fbfaf6;
 
 $bp-small: 640px;
 $bp-medium: 960px;
@@ -24,12 +27,45 @@ body{
 		);
 		background-attachment: fixed;
 		background-position: 50%;
+
+	background-color: $bg-color;
 }
 
-h1,h2,h3,h4,h5{
-
+h1,h2,h3,h4,h5, h6{
+	margin: 0 0 20px;
+	line-height: 1.1;
+	color: #000;
 }
-
+h1{
+	font-weight: 900;
+	line-height: 1;
+	font-size: 40px;
+	@media screen and (min-width: $bp-medium) {
+		font-size: 60px;
+	}	
+}
+h2{
+	font-size: 30px;
+	@media screen and (min-width: $bp-medium) {
+		font-size: 46px;
+	}	
+}
+h3{
+	font-size: 16px;
+}
+h4,h5,h6{
+	font-size: 14px;
+}
+a{
+	color: $primary-color;
+	text-decoration: none;
+	&:hover, &:focus{
+		color: $text-color;
+	}
+	&:active{
+		color: lighten($primary-color, 30%);
+	}
+}
 /* Layout */
 .ba-container{
 	padding-left: 15px;
@@ -487,6 +523,7 @@ select {
 		img{
 			display: block;
 			width: 100%;
+			transition: transform .3s;
 		}
 		&:hover, &:focus{
 			img{
@@ -577,4 +614,47 @@ select {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+//footer
+
+.ba-footer{
+	background: $bg-color;
+	border-top: 1px solid rgba(#000, .05); 
+	text-align: center;
+	padding: 41px 0 50px;
+	letter-spacing: -0.005em;	
+}
+.ba-footer-menu{
+	margin: 0 0 36px;
+	padding: 0;
+	list-style: none;	
+	li{
+		padding: 5px 10px;
+		@media screen and (min-width: $bp-large) {
+			padding: 5px 30.4px;			
+		}		
+	}
+	a{
+		font: 400 14px/1 Avenir, sans-serif;
+		color: $text-color;
+		white-space: nowrap;
+		&:hover, &:focus{
+			color: $primary-color;
+		}
+	}
+	@media screen and (min-width: $bp-small) {
+		display: flex; 
+		flex-wrap:wrap;
+		justify-content: center;
+	}	
+}
+.ba-copyright{
+	font-size: 14px;
+	a{
+		color: inherit;
+		&:hover, &:focus{
+			color: $primary-color;
+		}
+	}
 }

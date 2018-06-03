@@ -45,5 +45,18 @@
 		
 	});
 
+	// init magnific popup
+
+	$('[data-modal-video]').magnificPopup({
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+	});
+	$('[data-modal-image]').magnificPopup({
+		type: 'image',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+	});
+
 })(jQuery);
 
